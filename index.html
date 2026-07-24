@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>초루딩 퀴즈게임</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main class="game-container">
+
+    <!-- 시작 화면 -->
+    <section id="startScreen" class="screen start-screen">
+      <a
+        href="https://www.youtube.com/@user-choruding/posts"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="banner-link"
+        aria-label="초루딩 유튜브 커뮤니티로 이동"
+      >
+        <img
+          src="./banner.png"
+          alt="초루딩 배너"
+          class="banner-image"
+        >
+      </a>
+
+      <div class="profile-wrapper">
+        <a
+          href="https://www.youtube.com/@user-choruding/posts"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="초루딩 유튜브 커뮤니티로 이동"
+        >
+          <img
+            src="./profile.png"
+            alt="초루딩 프로필"
+            class="profile-image"
+          >
+        </a>
+      </div>
+
+      <h1>초루딩 퀴즈게임</h1>
+
+      <p class="start-description">
+        초루딩에 관한 10개의 문제를 맞혀보세요!
+      </p>
+
+      <p class="random-description">
+        게임을 시작할 때마다 문제 순서가 달라집니다.
+      </p>
+
+      <button id="startButton" class="main-button" type="button">
+        퀴즈 시작
+      </button>
+    </section>
+
+    <!-- 퀴즈 화면 -->
+    <section id="quizScreen" class="screen quiz-screen hidden">
+      <div class="quiz-header">
+        <span id="questionNumber">문제 1 / 10</span>
+
+        <span>
+          점수:
+          <strong id="scoreText">0</strong>
+        </span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+
+      <article class="question-card">
+        <h2 id="questionText">문제가 표시됩니다.</h2>
+
+        <p id="answerGuide" class="answer-guide hidden"></p>
+
+        <input
+          id="answerInput"
+          type="text"
+          placeholder="정답을 입력해주세요"
+          autocomplete="off"
+        >
+
+        <button id="submitButton" class="main-button" type="button">
+          정답 확인
+        </button>
+
+        <div id="resultBox" class="result-box hidden">
+          <p id="resultMessage" class="result-message"></p>
+
+          <p class="correct-answer">
+            정답:
+            <strong id="correctAnswerText"></strong>
+          </p>
+
+          <button id="nextButton" class="next-button" type="button">
+            다음 문제
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- 결과 화면 -->
+    <section id="endScreen" class="screen end-screen hidden">
+      <a
+        href="https://www.youtube.com/@user-choruding/posts"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="초루딩 유튜브 커뮤니티로 이동"
+      >
+        <img
+          src="./profile.png"
+          alt="초루딩 프로필"
+          class="end-profile"
+        >
+      </a>
+
+      <h2>퀴즈 완료!</h2>
+
+      <p class="final-score">
+        총
+        <strong id="totalQuestionCount">10</strong>문제 중
+        <strong id="finalScore">0</strong>문제를 맞혔습니다.
+      </p>
+
+      <div class="rank-box">
+        <span class="rank-label">당신의 등급</span>
+        <strong id="rankText" class="rank-text">사회돌이</strong>
+      </div>
+
+      <p id="finalMessage" class="final-message"></p>
+
+      <div id="creditBox" class="credit-box hidden">
+        <h3>Credits</h3>
+        <p>만든이: <strong>곰도리</strong></p>
+        <p>문제 출제자: <strong>초루딩</strong></p>
+      </div>
+
+      <p id="loveMessage" class="love-message hidden">
+        사도리들 초루가 마니 사랑한다
+      </p>
+
+      <button
+        id="menuButton"
+        class="main-button menu-button hidden"
+        type="button"
+      >
+        메뉴로 돌아가기
+      </button>
+    </section>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
